@@ -6,7 +6,7 @@
 /*   By: gclausse <gclausse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 08:25:33 by gclausse          #+#    #+#             */
-/*   Updated: 2022/10/06 10:17:12 by gclausse         ###   ########.fr       */
+/*   Updated: 2022/10/06 10:31:17 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 namespace ft{
 	
 template <class T, class Container = std::vector<T> >
-class Stack
+class stack
 {
 	private:
 		Container	c;
@@ -40,7 +40,25 @@ class Stack
 		void	swap(container& x) noexcept() {return c.swap(x);};
 		
 		
-		Stack(/* args */);
-		~Stack();
+		stack(const Container &container = Container()) : c(container){};
+		~stack();
 };
 }
+
+template <class T, class Container>
+bool operator==(const stack<T,Container>& lhs, const stack<T,Container>& rhs){return lhs.c == rhs.c;};
+
+template <class T, class Container>
+bool operator!=(const stack<T,Container>& lhs, const stack<T,Container>& rhs)	{return lhs.c != rhs.c;};
+
+template <class T, class Container>
+bool operator<(const stack<T,Container>& lhs, const stack<T,Container>& rhs)	{return lhs.c < rhs.c;};
+
+template <class T, class Container>
+bool operator<=(const stack<T,Container>& lhs, const stack<T,Container>& rhs)	{return lhs.c <= rhs.c;};
+
+template <class T, class Container>
+bool operator>(const stack<T,Container>& lhs, const stack<T,Container>& rhs)	{return lhs.c > rhs.c;};
+
+template <class T, class Container>
+bool operator>=(const stack<T,Container>& lhs, const stack<T,Container>& rhs)	{return lhs.c >= rhs.c;};
