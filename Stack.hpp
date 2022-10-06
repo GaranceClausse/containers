@@ -6,7 +6,7 @@
 /*   By: gclausse <gclausse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 08:25:33 by gclausse          #+#    #+#             */
-/*   Updated: 2022/10/06 10:31:17 by gclausse         ###   ########.fr       */
+/*   Updated: 2022/10/06 10:35:24 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,19 +46,19 @@ class stack
 }
 
 template <class T, class Container>
-bool operator==(const stack<T,Container>& lhs, const stack<T,Container>& rhs){return lhs.c == rhs.c;};
+bool operator==(const ft::stack<T,Container>& lhs, const ft::stack<T,Container>& rhs){return lhs.c == rhs.c;};
 
 template <class T, class Container>
-bool operator!=(const stack<T,Container>& lhs, const stack<T,Container>& rhs)	{return lhs.c != rhs.c;};
+bool operator!=(const ft::stack<T,Container>& lhs, const ft::stack<T,Container>& rhs)	{return lhs.c != rhs.c;};
 
 template <class T, class Container>
-bool operator<(const stack<T,Container>& lhs, const stack<T,Container>& rhs)	{return lhs.c < rhs.c;};
+bool operator<(const ft::stack<T,Container>& lhs, const ft::stack<T,Container>& rhs)	{return lhs.c < rhs.c;};
 
 template <class T, class Container>
-bool operator<=(const stack<T,Container>& lhs, const stack<T,Container>& rhs)	{return lhs.c <= rhs.c;};
+bool operator<=(const ft::stack<T,Container>& lhs, const ft::stack<T,Container>& rhs)	{return lhs.c <= rhs.c;};
 
 template <class T, class Container>
-bool operator>(const stack<T,Container>& lhs, const stack<T,Container>& rhs)	{return lhs.c > rhs.c;};
+bool operator>(const ft::stack<T,Container>& lhs, const ft::stack<T,Container>& rhs)	{return lhs.c > rhs.c;};
 
 template <class T, class Container>
-bool operator>=(const stack<T,Container>& lhs, const stack<T,Container>& rhs)	{return lhs.c >= rhs.c;};
+bool operator>=(const ft::stack<T,Container>& lhs, const ft::stack<T,Container>& rhs)	{return lhs.c >= rhs.c;};
